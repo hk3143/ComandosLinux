@@ -1777,10 +1777,10 @@
       <span class="eyebrow">Práctica de evaluación</span>
       <h1>Prueba sobre administración de sistemas</h1>
       <p class="intro">
-        Esta prueba se basa en el contenido de los capítulos <strong>La primera regla</strong> y
-        <strong>Análisis de requisitos</strong>. Cada nueva versión mezcla preguntas del texto con
-        una <strong>sección aparte de comandos Linux</strong>, y además cambia el orden de las
-        opciones para que no practiques siempre con la misma prueba.
+        Esta práctica se divide ahora en <strong>dos bloques independientes</strong>: una prueba de
+        <strong>teoría del texto</strong> basada en <strong>La primera regla</strong> y
+        <strong>Análisis de requisitos</strong>, y un <strong>examen separado de comandos Linux</strong>.
+        Cada intento rota preguntas más complejas <strong>sin repetirlas hasta agotar el banco disponible</strong>.
       </p>
 
       <div class="top-grid">
@@ -1788,26 +1788,27 @@
           <h2>Cómo usarla</h2>
           <ul>
             <li>Marca una sola opción por pregunta.</li>
-            <li>Cuando completes todo, pulsa <strong>Corregir prueba</strong>.</li>
-            <li>Pulsa <strong>Nueva versión</strong> para generar otro conjunto distinto.</li>
+            <li>Primero puedes resolver la <strong>prueba teórica</strong> y luego el <strong>examen de comandos</strong>.</li>
+            <li>Cuando completes un bloque, pulsa su botón de corrección.</li>
+            <li>Las nuevas versiones no repiten preguntas hasta recorrer todo el banco de ese bloque.</li>
             <li>La revisión final te mostrará aciertos, errores y la respuesta correcta.</li>
           </ul>
         </article>
 
         <article class="panel">
           <h2>Temas evaluados</h2>
-          <p>Teoría del texto, análisis de requisitos, priorización de servicios, acuerdos de nivel de servicio y una sección separada de comandos habituales de Linux.</p>
+          <p>La prueba teórica evalúa análisis de requisitos, prioridades, riesgo, disponibilidad y criterios de servicio. El examen aparte de Linux se centra en comandos, filtros, redirecciones, procesamiento y scripts del material.</p>
         </article>
       </div>
 
       <div class="stats">
         <article class="stat">
-          <small>Preguntas</small>
-          <strong id="total-questions">24</strong>
+          <small>Teoría</small>
+          <strong id="total-questions">18</strong>
         </article>
         <article class="stat">
-          <small>Bloques</small>
-          <strong>2</strong>
+          <small>Comandos</small>
+          <strong id="commands-total-stat">14</strong>
         </article>
         <article class="stat">
           <small>Versión</small>
@@ -1817,8 +1818,8 @@
 
       <section class="progress-card" aria-label="Progreso de la prueba">
         <div class="progress-meta">
-          <strong>Progreso</strong>
-          <span id="progress-text">0 de 24 respondidas</span>
+          <strong>Progreso teoría</strong>
+          <span id="progress-text">0 de 18 respondidas</span>
         </div>
         <div class="progress-track" aria-hidden="true">
           <div class="progress-bar" id="progress-bar"></div>
@@ -1947,22 +1948,31 @@
     </section>
 
     <form class="quiz-form" id="quiz-form">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Teoría</span>
+          <h2>Prueba de teoría del texto</h2>
+          <p>Este bloque evalúa solo contenidos conceptuales del texto y deja los comandos Linux para el examen independiente.</p>
+        </div>
+        <div class="section-count" id="theory-quiz-count">18 preguntas</div>
+      </div>
+
       <section class="question-list" id="question-list"></section>
 
       <div class="actions">
         <div class="status-copy" id="status-copy">
-          Cada nueva versión mezcla teoría y comandos Linux para que puedas practicar varias veces.
+          Cada nueva versión usa solo teoría del texto y rota preguntas sin repetirlas hasta agotar el banco.
         </div>
         <div>
-          <button type="button" class="secondary" id="reset-top">Nueva versión</button>
-          <button type="submit" class="primary">Corregir prueba</button>
+          <button type="button" class="secondary" id="reset-top">Nueva versión de teoría</button>
+          <button type="submit" class="primary">Corregir teoría</button>
         </div>
       </div>
     </form>
 
     <section class="results" id="results">
       <span class="eyebrow">Resultado final</span>
-      <h2>Corrección de la prueba</h2>
+      <h2>Corrección de la teoría</h2>
       <div class="score-grid">
         <article class="score-card">
           <div class="score-label">Nota sobre 10</div>
@@ -1978,13 +1988,13 @@
 
       <article class="review-card results-review">
         <h3>Revisión de respuestas</h3>
-        <p class="review-meta">Usa esta parte para detectar en qué puntos necesitas repasar antes de tu evaluación.</p>
+        <p class="review-meta">Usa esta parte para detectar qué conceptos del texto necesitas reforzar antes de tu evaluación.</p>
         <div class="review-list" id="review-list"></div>
       </article>
 
       <div class="actions results-actions">
-        <div class="status-copy">Puedes generar otra versión distinta tantas veces como quieras.</div>
-        <button type="button" class="primary" id="reset-bottom">Generar otra versión</button>
+        <div class="status-copy">Puedes generar otra versión teórica distinta cuando quieras.</div>
+        <button type="button" class="primary" id="reset-bottom">Generar otra versión teórica</button>
       </div>
     </section>
 
@@ -1993,15 +2003,15 @@
         <div>
           <span class="eyebrow">Modo examen</span>
           <h2>Examen de comandos del material</h2>
-          <p>Este modo usa solo comandos y operadores confirmados en el material. Se corrige aparte y entrega una nota independiente.</p>
+          <p>Este modo usa solo comandos y operadores del material, con un banco independiente que rota sin repetir preguntas hasta agotarlo.</p>
         </div>
-        <div class="section-count" id="commands-exam-count">12 preguntas</div>
+        <div class="section-count" id="commands-exam-count">14 preguntas</div>
       </div>
 
       <section class="progress-card" aria-label="Progreso del examen de comandos">
         <div class="progress-meta">
           <strong>Progreso del examen</strong>
-          <span id="commands-exam-progress-text">0 de 12 respondidas</span>
+          <span id="commands-exam-progress-text">0 de 14 respondidas</span>
         </div>
         <div class="progress-track" aria-hidden="true">
           <div class="progress-bar" id="commands-exam-progress-bar"></div>
@@ -2013,7 +2023,7 @@
 
         <div class="actions">
           <div class="status-copy" id="commands-exam-status-copy">
-            Cada nuevo examen usa solo comandos y operadores confirmados en el material.
+            Cada nuevo examen usa solo comandos y operadores del material, sin repetir preguntas hasta agotar el banco.
           </div>
           <div>
             <button type="button" class="secondary" id="commands-exam-reset-top">Nuevo examen</button>
@@ -2053,7 +2063,7 @@
   </main>
 
   <script>
-    const SECTION_ORDER = ["theory", "commands"];
+    const SECTION_ORDER = ["theory"];
     const SECTION_CONFIG = {
       theory: {
         label: "Teoria del texto",
@@ -2067,9 +2077,11 @@
       }
     };
 
+    const THEORY_QUIZ_COUNT = 18;
+    const COMMAND_EXAM_COUNT = 14;
     const QUESTION_COUNTS = {
-      theory: 12,
-      commands: 12
+      theory: THEORY_QUIZ_COUNT,
+      commands: COMMAND_EXAM_COUNT
     };
 
     const SEARCH_SOURCES = {
@@ -2373,7 +2385,6 @@
     ];
 
     const PRACTICE_CHALLENGE_COUNT = 6;
-    const COMMAND_EXAM_COUNT = 12;
 
     const questionBank = {
       theory: [
@@ -2688,6 +2699,138 @@
           ],
           answer: 1,
           explanation: "La conclusion une la primera regla con el analisis de requisitos como metodo de trabajo."
+        },
+        {
+          tag: "Capitulo 1",
+          prompt: "Si dos servicios compiten por CPU y memoria y uno de ellos sostiene operaciones criticas, ¿que decision encaja mejor con la primera regla del administrador?",
+          options: [
+            "Mantener ambos servicios con la misma prioridad para evitar conflictos politicos.",
+            "Proteger primero el acceso al servicio critico y revisar capacidad, prioridades y rendimiento.",
+            "Apagar temporalmente los dos servicios hasta tener hardware nuevo.",
+            "Esperar a que los usuarios definan por si mismos que proceso debe seguir activo."
+          ],
+          answer: 1,
+          explanation: "La primera regla obliga a sostener el acceso a los recursos y servicios mas importantes, y eso exige priorizar y gestionar capacidad."
+        },
+        {
+          tag: "Capitulo 2",
+          prompt: "¿Por que la frase 'necesitamos un servidor mas potente' no deberia aceptarse como requisito final sin mas analisis?",
+          options: [
+            "Porque los servidores potentes no existen para Linux.",
+            "Porque expresa una solucion propuesta, no una necesidad demostrada ni un resultado medible.",
+            "Porque toda mejora debe pasar primero por el departamento comercial.",
+            "Porque los requisitos tecnicos solo pueden redactarlos los usuarios finales."
+          ],
+          answer: 1,
+          explanation: "El analisis de requisitos distingue entre la solucion que alguien imagina y la necesidad real que debe demostrarse y medirse."
+        },
+        {
+          tag: "Capitulo 2",
+          prompt: "En un entorno heredado sin responsables claros ni documentacion reciente, ¿que accion inicial se ajusta mejor al analisis de requisitos?",
+          options: [
+            "Cambiar cuanto antes la infraestructura para dejarla uniforme.",
+            "Aclarar lineas de autoridad, servicios criticos, riesgos y expectativas antes de rediseñar nada.",
+            "Suspender todos los servicios no esenciales hasta conocer mejor el entorno.",
+            "Limitarse a revisar solo el inventario de hardware disponible."
+          ],
+          answer: 1,
+          explanation: "El texto recomienda entender autoridad, responsabilidades, servicios y criterios de exito antes de decidir cambios mayores."
+        },
+        {
+          tag: "Capitulo 2",
+          prompt: "¿Que vuelve util a un acuerdo de nivel de servicio durante una incidencia real?",
+          options: [
+            "Que evita documentar las decisiones tomadas durante la crisis.",
+            "Que fija prioridades, responsabilidades y criterios medibles para decidir que recuperar primero.",
+            "Que garantiza automaticamente que nunca habra fallos.",
+            "Que reemplaza la necesidad de copias de seguridad y pruebas."
+          ],
+          answer: 1,
+          explanation: "Un SLA es util porque traduce expectativas en criterios concretos para decidir y evaluar el servicio."
+        },
+        {
+          tag: "Capitulo 1",
+          prompt: "Si una aplicacion poco critica degrada correo y DNS durante horas punta, ¿que enfoque coincide mejor con el texto?",
+          options: [
+            "Mantener todos los servicios con la misma prioridad para no intervenir demasiado.",
+            "Asignar prioridad a los servicios esenciales del negocio y revisar recursos del servicio secundario.",
+            "Desactivar el correo hasta que termine la carga de la aplicacion menos importante.",
+            "Esperar a la siguiente actualizacion del sistema operativo para corregir el problema."
+          ],
+          answer: 1,
+          explanation: "El material insiste en priorizar segun impacto real sobre el negocio, no segun comodidad o visibilidad."
+        },
+        {
+          tag: "Capitulo 2",
+          prompt: "¿Por que la automatizacion aparece como una funcion estrategica del administrador y no solo como una comodidad tecnica?",
+          options: [
+            "Porque elimina la necesidad de analizar requisitos en nuevas solicitudes.",
+            "Porque reduce trabajo manual repetitivo, mejora consistencia y libera tiempo para tareas criticas.",
+            "Porque sustituye completamente el soporte a usuarios y directivos.",
+            "Porque evita documentar procesos y responsabilidades."
+          ],
+          answer: 1,
+          explanation: "Automatizar no es solo ahorrar tiempo: tambien mejora la calidad operativa y permite concentrarse en decisiones de mas valor."
+        },
+        {
+          tag: "Capitulo 2",
+          prompt: "¿Que riesgo aparece cuando el administrador responde solo al sintoma que plantea el usuario sin investigar mas?",
+          options: [
+            "Que termine resolviendo el problema equivocado y gastando recursos en una solucion superficial.",
+            "Que el sistema operativo quede automaticamente desactualizado.",
+            "Que el usuario pierda permiso para usar aplicaciones de red.",
+            "Que la documentacion oficial deje de ser valida."
+          ],
+          answer: 0,
+          explanation: "El capitulo de requisitos advierte justo eso: un sintoma mal interpretado puede llevar a una solucion tecnicamente correcta pero inutil."
+        },
+        {
+          tag: "Capitulo 2",
+          prompt: "¿Cual de estas opciones representa mejor una necesidad real que una simple peticion tecnica?",
+          options: [
+            "Comprar otro servidor de inmediato para la web corporativa.",
+            "Garantizar que el sitio este disponible para clientes externos en horario comercial con tiempo minimo de recuperacion.",
+            "Instalar mas memoria RAM en todos los equipos de la oficina.",
+            "Mover todos los servicios a una distribucion distinta sin revisar impacto."
+          ],
+          answer: 1,
+          explanation: "Una necesidad real describe el resultado esperado y su prioridad; una peticion tecnica ya presupone la solucion."
+        },
+        {
+          tag: "Capitulo 2",
+          prompt: "Si la direccion exige alta disponibilidad pero no define tiempos aceptables de caida ni servicios prioritarios, ¿que falta todavia para decidir bien?",
+          options: [
+            "Solo falta elegir el proveedor de hardware mas conocido.",
+            "Faltan criterios concretos de exito, prioridad y recuperacion para traducir el objetivo en decisiones tecnicas.",
+            "Falta instalar Linux en estaciones de trabajo de oficina.",
+            "Falta nombrar un operador para que el analisis deje de ser necesario."
+          ],
+          answer: 1,
+          explanation: "Sin criterios medibles de servicio, disponibilidad y prioridad no puede derivarse una arquitectura o un plan coherente."
+        },
+        {
+          tag: "Capitulo 1",
+          prompt: "¿Que relacion correcta plantea el texto entre conocer el negocio y tomar decisiones tecnicas?",
+          options: [
+            "La tecnica va primero y el contexto del negocio solo importa al final.",
+            "Las decisiones tecnicas deben alinearse con impacto, prioridades y objetivos reales del negocio.",
+            "El negocio solo influye en compras de hardware, no en operacion diaria.",
+            "Conocer el negocio es util solo en proyectos grandes, no en solicitudes cotidianas."
+          ],
+          answer: 1,
+          explanation: "El texto insiste en que el administrador traduce normas y objetivos de negocio en acciones tecnicas concretas."
+        },
+        {
+          tag: "Conclusion",
+          prompt: "¿Que enfoque demuestra mejor que un administrador entendio tanto la primera regla como el analisis de requisitos?",
+          options: [
+            "Aplicar siempre la misma solucion tecnica para acelerar la respuesta.",
+            "Priorizar el acceso a servicios criticos, medir impacto y elegir soluciones segun necesidades reales.",
+            "Responder primero a quien reclama con mas insistencia, aunque el servicio no sea esencial.",
+            "Delegar todas las decisiones complejas hasta que el problema crezca lo suficiente."
+          ],
+          answer: 1,
+          explanation: "La combinacion correcta es comprender necesidades, priorizar impacto y sostener el acceso a los recursos realmente importantes."
         }
       ],
       commands: [
@@ -3158,6 +3301,150 @@
           ],
           answer: 0,
           explanation: "<code>2&gt;</code> redirige la salida de error estandar a un archivo."
+        },
+        {
+          tag: "Pipes",
+          prompt: "Necesitas contar cuantas lineas del archivo mencionan Chile sin crear archivos intermedios. ¿Que opcion es la mas directa?",
+          options: [
+            "<code>grep \"Chile\" datos/usuarios.txt | wc -l</code>",
+            "<code>grep \"Chile\" datos/usuarios.txt &gt; wc -l</code>",
+            "<code>wc -l | grep \"Chile\" datos/usuarios.txt</code>",
+            "<code>sort datos/usuarios.txt | uniq Chile</code>"
+          ],
+          answer: 0,
+          explanation: "La pipe entrega la salida filtrada de <code>grep</code> a <code>wc -l</code> para contar coincidencias sin crear archivos temporales."
+        },
+        {
+          tag: "Procesamiento",
+          prompt: "Quieres obtener la tercera columna de un CSV y quedarte solo con los roles unicos ordenados. ¿Que tuberia encaja mejor con el material?",
+          options: [
+            "<code>awk -F \",\" '{print $3}' datos/usuarios.txt | sort | uniq</code>",
+            "<code>uniq datos/usuarios.txt | awk -F \",\" '{print $3}' | sort</code>",
+            "<code>cut -d \",\" -f3 datos/usuarios.txt | uniq | pwd</code>",
+            "<code>head -n 3 datos/usuarios.txt | sort | awk</code>"
+          ],
+          answer: 0,
+          explanation: "Primero se extrae el campo, luego se ordena y al final se eliminan duplicados contiguos con <code>uniq</code>."
+        },
+        {
+          tag: "Redirecciones",
+          prompt: "Si <code>bitacora.txt</code> ya contiene informacion y quieres agregar una linea nueva al final sin borrar lo anterior, ¿que opcion corresponde?",
+          options: [
+            "<code>echo \"Nuevo evento\" &gt;&gt; bitacora.txt</code>",
+            "<code>echo \"Nuevo evento\" &gt; bitacora.txt</code>",
+            "<code>echo \"Nuevo evento\" | bitacora.txt</code>",
+            "<code>echo \"Nuevo evento\" 2&gt; bitacora.txt</code>"
+          ],
+          answer: 0,
+          explanation: "<code>&gt;&gt;</code> agrega contenido al final; <code>&gt;</code> lo reemplazaria."
+        },
+        {
+          tag: "Redirecciones",
+          prompt: "Quieres reemplazar por completo el contenido de <code>reporte.txt</code> con una nueva linea generada desde consola. ¿Que instruccion encaja mejor?",
+          options: [
+            "<code>echo \"Reporte limpio\" &gt; reporte.txt</code>",
+            "<code>echo \"Reporte limpio\" &gt;&gt; reporte.txt</code>",
+            "<code>echo \"Reporte limpio\" | reporte.txt</code>",
+            "<code>echo \"Reporte limpio\" 2&gt; reporte.txt</code>"
+          ],
+          answer: 0,
+          explanation: "<code>&gt;</code> crea o sobreescribe el archivo con la salida producida por <code>echo</code>."
+        },
+        {
+          tag: "Directorios",
+          prompt: "Necesitas preparar en una sola orden la estructura <code>datos</code>, <code>procesados</code> y <code>logs</code> dentro de <code>laboratorio_avanzado</code>. ¿Que comando coincide con el material?",
+          options: [
+            "<code>mkdir -p laboratorio_avanzado/{datos,procesados,logs}</code>",
+            "<code>mkdir laboratorio_avanzado datos procesados logs</code>",
+            "<code>cp -p laboratorio_avanzado/{datos,procesados,logs}</code>",
+            "<code>rmdir -p laboratorio_avanzado/{datos,procesados,logs}</code>"
+          ],
+          answer: 0,
+          explanation: "Ese ejemplo del material crea la estructura completa de trabajo en una sola instruccion."
+        },
+        {
+          tag: "Lectura",
+          prompt: "Tienes un archivo largo y primero quieres ver su inicio rapido, luego navegarlo con mas control. ¿Que secuencia tiene mas sentido con los comandos del material?",
+          options: [
+            "<code>head -n 5 usuarios.txt</code> y despues <code>less usuarios.txt</code>",
+            "<code>tail -n 5 usuarios.txt</code> y despues <code>pwd usuarios.txt</code>",
+            "<code>nano usuarios.txt</code> y despues <code>chmod usuarios.txt</code>",
+            "<code>uniq usuarios.txt</code> y despues <code>mkdir usuarios.txt</code>"
+          ],
+          answer: 0,
+          explanation: "<code>head</code> da una vista rapida del inicio y <code>less</code> permite revisar el archivo largo con desplazamiento."
+        },
+        {
+          tag: "Filtros",
+          prompt: "Necesitas guardar solo las lineas de Chile en un archivo procesado y luego revisar el resultado en pantalla. ¿Que secuencia encaja mejor?",
+          options: [
+            "<code>grep \"Chile\" datos/usuarios.txt &gt; procesados/chilenos.txt</code> y despues <code>cat procesados/chilenos.txt</code>",
+            "<code>cat datos/usuarios.txt &gt; grep \"Chile\"</code> y despues <code>pwd procesados/chilenos.txt</code>",
+            "<code>sort datos/usuarios.txt</code> y despues <code>grep procesados/chilenos.txt</code>",
+            "<code>mkdir procesados/chilenos.txt</code> y despues <code>tail Chile</code>"
+          ],
+          answer: 0,
+          explanation: "Primero se filtra y redirige la salida; despues se puede revisar el archivo generado con <code>cat</code>."
+        },
+        {
+          tag: "Procesamiento",
+          prompt: "¿Que flujo sirve para obtener la segunda columna de un CSV, ordenarla y eliminar duplicados?",
+          options: [
+            "<code>cut -d \",\" -f2 datos/usuarios.txt | sort | uniq</code>",
+            "<code>uniq datos/usuarios.txt | cut -d \",\" -f2 | sort</code>",
+            "<code>awk datos/usuarios.txt | pwd | uniq</code>",
+            "<code>tail -n 2 datos/usuarios.txt | sort | chmod</code>"
+          ],
+          answer: 0,
+          explanation: "Se extrae primero el campo deseado, luego se ordena y finalmente se limpian duplicados contiguos."
+        },
+        {
+          tag: "Procesamiento",
+          prompt: "¿En que situacion conviene preferir <code>awk</code> sobre <code>cut</code> segun la logica del material?",
+          options: [
+            "Cuando solo quieres abrir un archivo para editarlo manualmente.",
+            "Cuando necesitas reglas mas flexibles para seleccionar e imprimir campos o transformar la salida.",
+            "Cuando el objetivo es dar permiso de ejecucion a un script.",
+            "Cuando solo necesitas cambiar de directorio."
+          ],
+          answer: 1,
+          explanation: "El propio material presenta <code>awk</code> como una herramienta mas flexible que <code>cut</code> para procesar campos."
+        },
+        {
+          tag: "Scripts",
+          prompt: "Quieres dejar listo un script de Bash y poder ejecutarlo desde el directorio actual. ¿Que opcion resume el proceso correcto?",
+          options: [
+            "Agregar <code>#!/bin/bash</code>, ejecutar <code>chmod +x reporte.sh</code> y lanzarlo como <code>./reporte.sh</code>.",
+            "Abrirlo con <code>less</code>, guardarlo con <code>&gt;</code> y ejecutarlo con <code>pwd reporte.sh</code>.",
+            "Ordenarlo con <code>sort</code>, quitar duplicados con <code>uniq</code> y luego moverlo con <code>mv</code>.",
+            "Usar <code>tail</code> para activar Bash y <code>cat</code> para dar permisos de ejecucion."
+          ],
+          answer: 0,
+          explanation: "El material relaciona el shebang, el permiso de ejecucion y la ejecucion directa del script desde la ruta actual."
+        },
+        {
+          tag: "Errores",
+          prompt: "Necesitas capturar el error de un <code>ls</code> fallido en un archivo para revisarlo despues. ¿Que comando del material corresponde?",
+          options: [
+            "<code>ls carpeta_que_no_existe 2&gt; errores.txt</code>",
+            "<code>ls carpeta_que_no_existe &gt;&gt; errores.txt</code>",
+            "<code>ls carpeta_que_no_existe | errores.txt</code>",
+            "<code>ls carpeta_que_no_existe -f errores.txt</code>"
+          ],
+          answer: 0,
+          explanation: "<code>2&gt;</code> envia la salida de error estandar al archivo especificado."
+        },
+        {
+          tag: "Lectura",
+          prompt: "Si quieres comprobar rapidamente si un archivo generado tiene el encabezado esperado, ¿que comando del material encaja mejor?",
+          options: [
+            "<code>head -n 2 procesados/reporte.txt</code>",
+            "<code>tail -n 2 procesados/reporte.txt</code>",
+            "<code>chmod -n 2 procesados/reporte.txt</code>",
+            "<code>mkdir -n 2 procesados/reporte.txt</code>"
+          ],
+          answer: 0,
+          explanation: "Para validar el comienzo de un archivo, <code>head</code> es la opcion mas directa del material."
         }
       ]
     };
@@ -3662,9 +3949,25 @@
 
     questionBank.commands = questionBank.commands.filter((question) => !LEGACY_COMMAND_PROMPTS.has(question.prompt));
 
+    Object.entries(questionBank).forEach(([sectionKey, questions]) => {
+      questions.forEach((question, index) => {
+        question.id = `${sectionKey}-${index}`;
+      });
+    });
+
+    const questionRotation = {
+      theory: [],
+      commands: []
+    };
+
+    function getQuestionLimit(sectionKey, requestedCount = QUESTION_COUNTS[sectionKey]) {
+      return Math.min(requestedCount, questionBank[sectionKey].length);
+    }
+
     const form = document.getElementById("quiz-form");
     const questionList = document.getElementById("question-list");
     const totalQuestions = document.getElementById("total-questions");
+    const commandsTotalStat = document.getElementById("commands-total-stat");
     const versionCounter = document.getElementById("quiz-version");
     const progressText = document.getElementById("progress-text");
     const progressBar = document.getElementById("progress-bar");
@@ -3674,6 +3977,7 @@
     const scoreSummary = document.getElementById("score-summary");
     const chapterBreakdown = document.getElementById("chapter-breakdown");
     const reviewList = document.getElementById("review-list");
+    const theoryQuizCount = document.getElementById("theory-quiz-count");
     const resetTop = document.getElementById("reset-top");
     const resetBottom = document.getElementById("reset-bottom");
     const commandsExamCount = document.getElementById("commands-exam-count");
@@ -3733,10 +4037,16 @@
     let activePracticeChallenges = [];
     let practiceAnswers = {};
 
+    const initialTheoryCount = getQuestionLimit("theory", THEORY_QUIZ_COUNT);
+    const initialCommandCount = getQuestionLimit("commands", COMMAND_EXAM_COUNT);
+
     searchSourceCount.textContent = `${Object.keys(SEARCH_SOURCES).length - 1} fuentes`;
     terminalCommandCount.textContent = `${kaliScenarios.length} escenarios`;
     practiceCount.textContent = `${PRACTICE_CHALLENGE_COUNT} retos`;
-    commandsExamCount.textContent = `${Math.min(COMMAND_EXAM_COUNT, questionBank.commands.length)} preguntas`;
+    totalQuestions.textContent = String(initialTheoryCount);
+    theoryQuizCount.textContent = `${initialTheoryCount} preguntas`;
+    commandsTotalStat.textContent = String(initialCommandCount);
+    commandsExamCount.textContent = `${initialCommandCount} preguntas`;
 
     function shuffleArray(items) {
       const copy = [...items];
@@ -3761,6 +4071,14 @@
         .replace(/>/g, "&gt;")
         .replace(/\"/g, "&quot;")
         .replace(/'/g, "&#39;");
+    }
+
+    function refillQuestionRotation(sectionKey, excludeIds = new Set()) {
+      const replenishment = shuffleArray(
+        questionBank[sectionKey].filter((question) => !excludeIds.has(question.id))
+      );
+
+      questionRotation[sectionKey].push(...replenishment);
     }
 
     function truncateText(text, maxLength = 240) {
@@ -4775,9 +5093,42 @@
     }
 
     function pickQuestions(sectionKey, amount = QUESTION_COUNTS[sectionKey]) {
-      return shuffleArray(questionBank[sectionKey])
-        .slice(0, amount)
-        .map((question) => prepareQuestion(question, sectionKey));
+      const targetAmount = getQuestionLimit(sectionKey, amount);
+      if (!targetAmount) {
+        return [];
+      }
+
+      const selectedQuestions = [];
+      const selectedIds = new Set();
+
+      while (selectedQuestions.length < targetAmount) {
+        if (!questionRotation[sectionKey].length) {
+          refillQuestionRotation(sectionKey, selectedIds);
+        }
+
+        const nextQuestion = questionRotation[sectionKey].shift();
+
+        if (!nextQuestion || selectedIds.has(nextQuestion.id)) {
+          continue;
+        }
+
+        selectedQuestions.push(nextQuestion);
+        selectedIds.add(nextQuestion.id);
+
+        if (
+          !questionRotation[sectionKey].length &&
+          selectedQuestions.length < targetAmount &&
+          selectedQuestions.length < questionBank[sectionKey].length
+        ) {
+          refillQuestionRotation(sectionKey, selectedIds);
+        }
+
+        if (selectedIds.size === questionBank[sectionKey].length) {
+          break;
+        }
+      }
+
+      return selectedQuestions.map((question) => prepareQuestion(question, sectionKey));
     }
 
     function renderSection(sectionKey, sectionQuestions, startNumber, options = {}) {
@@ -4881,8 +5232,8 @@
         progressText,
         progressBar,
         statusCopy,
-        "Cada nueva version mezcla teoria y comandos del material para que no practiques siempre lo mismo.",
-        "Todo listo. Ya puedes corregir esta version de la prueba."
+        "Cada nueva version usa solo teoria del texto y rota preguntas sin repetirlas hasta agotar el banco.",
+        "Todo listo. Ya puedes corregir esta version de teoria."
       );
     }
 
@@ -4893,7 +5244,7 @@
         commandsExamProgressText,
         commandsExamProgressBar,
         commandsExamStatusCopy,
-        "Cada nuevo examen usa solo comandos y operadores confirmados en el material.",
+        "Cada nuevo examen usa solo comandos y operadores del material, sin repetir preguntas hasta agotar el banco.",
         "Todo listo. Ya puedes corregir este examen de comandos."
       );
     }
@@ -5247,10 +5598,7 @@
 
     function buildQuiz(scrollToTop = false) {
       version += 1;
-      const selectedQuestions = [
-        ...pickQuestions("theory"),
-        ...pickQuestions("commands")
-      ];
+      const selectedQuestions = pickQuestions("theory", THEORY_QUIZ_COUNT);
 
       activeQuestions = selectedQuestions.map((question, index) => ({
         ...question,
@@ -5262,6 +5610,7 @@
       clearMissingMarks(questionList);
       results.classList.remove("visible");
       totalQuestions.textContent = String(activeQuestions.length);
+      theoryQuizCount.textContent = `${activeQuestions.length} preguntas`;
       versionCounter.textContent = String(version);
       updateProgress();
 
@@ -5271,7 +5620,7 @@
     }
 
     function buildCommandExam(scrollIntoView = false) {
-      activeCommandExamQuestions = pickQuestions("commands", Math.min(COMMAND_EXAM_COUNT, questionBank.commands.length)).map((question, index) => ({
+      activeCommandExamQuestions = pickQuestions("commands", COMMAND_EXAM_COUNT).map((question, index) => ({
         ...question,
         uid: index
       }));
@@ -5281,6 +5630,7 @@
       clearMissingMarks(commandsExamQuestionList);
       commandsExamResults.classList.remove("visible");
       commandsExamCount.textContent = `${activeCommandExamQuestions.length} preguntas`;
+      commandsTotalStat.textContent = String(activeCommandExamQuestions.length);
       updateCommandExamProgress();
 
       if (scrollIntoView) {
