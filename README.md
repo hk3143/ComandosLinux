@@ -1,20 +1,5 @@
 <div align="center">
 	<img src="assets/readme-cover.svg" alt="Portada del proyecto" width="100%">
-
-	<h1>Plataforma de Practica para Administracion de Sistemas</h1>
-
-	<p>
-		Proyecto web estatico orientado a practica academica, consulta guiada y simulacion de terminal,
-		construido a partir de material real de estudio y preparado para publicacion directa en GitHub Pages.
-	</p>
-
-	<p>
-		<img src="https://img.shields.io/badge/HTML-Static%20Site-1F2C2C?style=for-the-badge&logo=html5&logoColor=white" alt="HTML Static Site">
-		<img src="https://img.shields.io/badge/CSS-Responsive%20UI-B45D3C?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Responsive UI">
-		<img src="https://img.shields.io/badge/JavaScript-Vanilla%20Logic-8AA79B?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript Vanilla Logic">
-		<img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-2F6F4F?style=for-the-badge&logo=github&logoColor=white" alt="Deploy GitHub Pages">
-		<img src="https://img.shields.io/badge/Status-Portfolio%20Ready-516160?style=for-the-badge" alt="Status Portfolio Ready">
-	</p>
 </div>
 
 ## Resumen
