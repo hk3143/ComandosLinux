@@ -1,0 +1,31 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="420" rx="28" fill="#F8F2E7"/>
+  <rect x="24" y="24" width="672" height="372" rx="26" fill="#FFFDF9" stroke="#1F2C2C" stroke-opacity="0.08"/>
+  <rect x="48" y="48" width="624" height="38" rx="14" fill="#F2ECE1"/>
+  <circle cx="68" cy="67" r="4" fill="#D6BFB0"/>
+  <circle cx="82" cy="67" r="4" fill="#D6BFB0"/>
+  <circle cx="96" cy="67" r="4" fill="#D6BFB0"/>
+
+  <rect x="52" y="114" width="132" height="28" rx="14" fill="#EEF2EC"/>
+  <text x="78" y="132" fill="#516160" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">BUSCADOR</text>
+  <text x="52" y="188" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Consulta por comando</text>
+  <text x="52" y="226" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">o por accion</text>
+
+  <rect x="52" y="256" width="298" height="44" rx="16" fill="#FFFFFF" stroke="#1F2C2C" stroke-opacity="0.1"/>
+  <text x="74" y="284" fill="#8B9592" font-family="Arial, Helvetica, sans-serif" font-size="18">crear carpeta</text>
+
+  <rect x="52" y="318" width="88" height="32" rx="16" fill="#1F2C2C"/>
+  <text x="82" y="339" fill="#FBF7EF" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Todo</text>
+  <rect x="150" y="318" width="124" height="32" rx="16" fill="#EEF2EC"/>
+  <text x="176" y="339" fill="#516160" font-family="Arial, Helvetica, sans-serif" font-size="14">Guia practica</text>
+
+  <rect x="408" y="118" width="244" height="236" rx="22" fill="#FFFFFF" stroke="#1F2C2C" stroke-opacity="0.08"/>
+  <rect x="430" y="140" width="108" height="24" rx="12" fill="#DCE7E3"/>
+  <text x="455" y="156" fill="#244440" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700">RESULTADO</text>
+  <text x="430" y="202" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Como crear una</text>
+  <text x="430" y="232" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">carpeta nueva</text>
+  <rect x="430" y="256" width="122" height="34" rx="14" fill="#F3F0E9"/>
+  <text x="458" y="278" fill="#516160" font-family="Consolas, monospace" font-size="16">mkdir</text>
+  <rect x="430" y="312" width="178" height="12" rx="6" fill="#EFE8DB"/>
+  <rect x="430" y="334" width="156" height="12" rx="6" fill="#EFE8DB"/>
+</svg>

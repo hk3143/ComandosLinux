@@ -1,0 +1,102 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1180" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6E4CF"/>
+      <stop offset="0.52" stop-color="#FBF7EF"/>
+      <stop offset="1" stop-color="#DDE8E3"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="742" y1="132" x2="1114" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#F3EBDD"/>
+    </linearGradient>
+    <linearGradient id="terminal" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#111822"/>
+      <stop offset="1" stop-color="#0B1119"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" rx="30" fill="url(#bg)"/>
+  <circle cx="1108" cy="90" r="130" fill="#EBCDBD" fill-opacity="0.72"/>
+  <circle cx="86" cy="592" r="168" fill="#D6E4DE" fill-opacity="0.84"/>
+
+  <g opacity="0.14">
+    <path d="M0 64H1280" stroke="#1F2C2C"/>
+    <path d="M0 128H1280" stroke="#1F2C2C"/>
+    <path d="M0 192H1280" stroke="#1F2C2C"/>
+    <path d="M0 256H1280" stroke="#1F2C2C"/>
+    <path d="M0 320H1280" stroke="#1F2C2C"/>
+    <path d="M0 384H1280" stroke="#1F2C2C"/>
+    <path d="M0 448H1280" stroke="#1F2C2C"/>
+    <path d="M0 512H1280" stroke="#1F2C2C"/>
+    <path d="M0 576H1280" stroke="#1F2C2C"/>
+    <path d="M64 0V640" stroke="#1F2C2C"/>
+    <path d="M128 0V640" stroke="#1F2C2C"/>
+    <path d="M192 0V640" stroke="#1F2C2C"/>
+    <path d="M256 0V640" stroke="#1F2C2C"/>
+    <path d="M320 0V640" stroke="#1F2C2C"/>
+    <path d="M384 0V640" stroke="#1F2C2C"/>
+    <path d="M448 0V640" stroke="#1F2C2C"/>
+    <path d="M512 0V640" stroke="#1F2C2C"/>
+    <path d="M576 0V640" stroke="#1F2C2C"/>
+    <path d="M640 0V640" stroke="#1F2C2C"/>
+    <path d="M704 0V640" stroke="#1F2C2C"/>
+    <path d="M768 0V640" stroke="#1F2C2C"/>
+    <path d="M832 0V640" stroke="#1F2C2C"/>
+    <path d="M896 0V640" stroke="#1F2C2C"/>
+    <path d="M960 0V640" stroke="#1F2C2C"/>
+    <path d="M1024 0V640" stroke="#1F2C2C"/>
+    <path d="M1088 0V640" stroke="#1F2C2C"/>
+    <path d="M1152 0V640" stroke="#1F2C2C"/>
+    <path d="M1216 0V640" stroke="#1F2C2C"/>
+  </g>
+
+  <rect x="70" y="70" width="460" height="500" rx="28" fill="#FFFBF4" fill-opacity="0.9" stroke="#1F2C2C" stroke-opacity="0.08"/>
+  <rect x="104" y="106" width="132" height="38" rx="19" fill="#EEF2EC"/>
+  <text x="129" y="130" fill="#516160" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">PORTFOLIO</text>
+
+  <text x="104" y="210" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">Plataforma</text>
+  <text x="104" y="268" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">de practica</text>
+  <text x="104" y="326" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">para sistemas</text>
+
+  <text x="104" y="390" fill="#516160" font-family="Arial, Helvetica, sans-serif" font-size="22">Estudio guiado, simulacion de terminal,</text>
+  <text x="104" y="422" fill="#516160" font-family="Arial, Helvetica, sans-serif" font-size="22">quices y despliegue directo en GitHub Pages.</text>
+
+  <rect x="104" y="468" width="104" height="36" rx="18" fill="#1F2C2C"/>
+  <text x="136" y="491" fill="#FBF7EF" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">HTML</text>
+  <rect x="220" y="468" width="92" height="36" rx="18" fill="#B45D3C"/>
+  <text x="252" y="491" fill="#FBF7EF" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">CSS</text>
+  <rect x="324" y="468" width="142" height="36" rx="18" fill="#8AA79B"/>
+  <text x="355" y="491" fill="#FBF7EF" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">JavaScript</text>
+
+  <rect x="592" y="108" width="612" height="372" rx="28" fill="url(#hero)" stroke="#1F2C2C" stroke-opacity="0.08"/>
+  <rect x="620" y="136" width="556" height="42" rx="16" fill="#F3EEE3"/>
+  <circle cx="646" cy="157" r="5" fill="#D3B9A8"/>
+  <circle cx="664" cy="157" r="5" fill="#D3B9A8"/>
+  <circle cx="682" cy="157" r="5" fill="#D3B9A8"/>
+  <rect x="620" y="204" width="250" height="248" rx="22" fill="#FFFDF9" stroke="#1F2C2C" stroke-opacity="0.06"/>
+  <rect x="642" y="226" width="108" height="26" rx="13" fill="#EEF2EC"/>
+  <text x="664" y="243" fill="#516160" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">BUSCADOR</text>
+  <rect x="642" y="274" width="184" height="36" rx="16" fill="#FFFFFF" stroke="#1F2C2C" stroke-opacity="0.08"/>
+  <rect x="642" y="328" width="84" height="30" rx="15" fill="#1F2C2C"/>
+  <rect x="736" y="328" width="116" height="30" rx="15" fill="#EEF2EC"/>
+  <rect x="642" y="378" width="186" height="50" rx="18" fill="#F4EDDF"/>
+
+  <rect x="894" y="204" width="282" height="248" rx="22" fill="url(#terminal)"/>
+  <rect x="914" y="224" width="242" height="24" rx="12" fill="#182331"/>
+  <circle cx="930" cy="236" r="4" fill="#FF5E57"/>
+  <circle cx="944" cy="236" r="4" fill="#FEBB2E"/>
+  <circle cx="958" cy="236" r="4" fill="#28C840"/>
+  <text x="978" y="240" fill="#D4E3F7" font-family="Arial, Helvetica, sans-serif" font-size="12">terminal demo</text>
+  <text x="918" y="286" fill="#79E2B4" font-family="Consolas, monospace" font-size="15">kali@kali</text>
+  <text x="989" y="286" fill="#EEF5FF" font-family="Consolas, monospace" font-size="15">:</text>
+  <text x="998" y="286" fill="#84B6FF" font-family="Consolas, monospace" font-size="15">~/lab</text>
+  <text x="1040" y="286" fill="#EEF5FF" font-family="Consolas, monospace" font-size="15">$</text>
+  <text x="918" y="318" fill="#EDF3FD" font-family="Consolas, monospace" font-size="15">grep -n error auth.log</text>
+  <text x="918" y="350" fill="#9DE7BE" font-family="Consolas, monospace" font-size="15">14:error al validar sesion</text>
+  <rect x="918" y="388" width="162" height="10" rx="5" fill="#203245"/>
+  <rect x="918" y="388" width="96" height="10" rx="5" fill="#5DD39E"/>
+
+  <rect x="812" y="512" width="280" height="76" rx="22" fill="#FFFBF4" stroke="#1F2C2C" stroke-opacity="0.08"/>
+  <text x="838" y="544" fill="#1F2C2C" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Listo para GitHub Pages</text>
+  <text x="838" y="570" fill="#516160" font-family="Arial, Helvetica, sans-serif" font-size="15">Repositorio estatico con foco en estudio y portafolio.</text>
+</svg>
