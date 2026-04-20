@@ -1,0 +1,92 @@
+RESUMEN
+
+Este texto introduce la administración de sistemas en entornos Linux/UNIX a partir de dos ideas
+centrales: la misión principal del administrador es mantener el acceso a los recursos del
+sistema, y para hacerlo bien necesita analizar correctamente los requisitos del negocio y de los
+usuarios.
+
+CAPÍTULO 1. LA PRIMERA REGLA
+
+La primera regla del administrador de sistemas consiste en proporcionar y mantener acceso a los
+recursos del sistema. Entre esos recursos se incluyen archivos, aplicaciones, periféricos,
+ancho de banda, ciclos de CPU, memoria y almacenamiento. El texto insiste en que la tarea no se
+limita a que el sistema esté encendido: también implica conservar su disponibilidad cuando hay
+fallos, ataques, errores humanos o crecimiento de la demanda.
+
+Desde esta perspectiva, la administración de sistemas abarca seguridad, copias de seguridad,
+recuperación ante desastres, valoración de riesgos, pruebas, control del rendimiento y
+planificación de capacidad. Cuando el uso de un recurso supera su capacidad, el administrador ha
+fallado en esa primera regla, porque ya no puede garantizar el acceso normal a los servicios.
+
+El texto también explica por qué los sistemas necesitan administración permanente. Aunque Linux
+sea fácil de instalar y usar, los entornos reales cambian con el tiempo, las organizaciones tienen
+necesidades distintas y los sistemas informáticos son herramientas de propósito general que deben
+adaptarse a cada empresa. Por eso el administrador no solo mantiene, sino que ajusta y organiza
+la infraestructura para responder a necesidades concretas.
+
+Además, se diferencian varios papeles dentro del trabajo técnico. El operador ejecuta
+procedimientos rutinarios, como copias de seguridad, altas y bajas de usuarios, restauración de
+archivos o pequeñas reparaciones. El administrador de sistemas diseña esos procedimientos,
+planifica ampliaciones, automatiza tareas, evalúa herramientas, selecciona hardware y software,
+documenta el entorno y prepara medidas de recuperación y seguridad. El texto subraya que esta
+función suele solaparse con redes, bases de datos, soporte técnico y otros sistemas de la
+empresa.
+
+Por último, el capítulo destaca la importancia de la documentación. La documentación oficial del
+sistema, el Proyecto de Documentación de Linux y los libros especializados son fuentes básicas de
+trabajo. El administrador necesita estudiar continuamente, investigar soluciones y ampliar su
+conocimiento para responder a entornos que cambian de forma constante.
+
+CAPÍTULO 2. ANÁLISIS DE REQUISITOS
+
+El segundo capítulo plantea que un problema mal entendido conduce a una solución equivocada. Los
+usuarios y directivos suelen expresar síntomas o pedir soluciones concretas, pero el trabajo del
+administrador consiste en descubrir la necesidad real que hay detrás. Por ejemplo, un usuario
+puede pedir equipos nuevos cuando en realidad el problema es una falta de memoria.
+
+El análisis de requisitos se define como el proceso de traducir resultados deseados en
+especificaciones concretas. La dirección fija normas y objetivos, y el administrador de sistemas
+los convierte en procedimientos, planes, recomendaciones y prioridades técnicas. La clave está en
+entender qué quieren realmente los usuarios, quiénes son las partes implicadas y qué condiciones
+deben cumplirse para considerar que el trabajo ha tenido éxito.
+
+El texto aplica esta idea tanto al trabajo diario como a la aceptación de un puesto de trabajo.
+Antes de asumir responsabilidades, conviene preguntar por las líneas de autoridad, los sistemas a
+cargo, la existencia de soporte interno, las políticas de seguridad, los planes de recuperación,
+los problemas de rendimiento y la situación heredada del administrador anterior. Este análisis
+permite aclarar expectativas, detectar riesgos y negociar mejor las obligaciones reales del
+puesto.
+
+Una herramienta central es la especificación o acuerdo de nivel de servicio. Este documento sirve
+para definir prioridades, aclarar responsabilidades y disponer de criterios para medir si el
+servicio está funcionando como se espera. Para construirlo, el administrador debe identificar a
+las partes interesadas, aclarar la autoridad de cada una, inventariar recursos, analizar cómo se
+usan realmente los sistemas y formular preguntas abiertas que revelen las necesidades de fondo.
+
+El capítulo también muestra que los servicios no tienen todos la misma importancia. Algunas
+funciones deben recibir prioridad porque sostienen operaciones críticas del negocio, como las
+bases de datos de transacciones, el correo corporativo, DNS, el encaminamiento básico y otros
+servicios de infraestructura. La planificación de la recuperación y la gestión de capacidad surgen
+de este mismo análisis, ya que dependen de comprender qué recursos son críticos y qué impacto
+tiene su fallo.
+
+En el trabajo cotidiano, cada nueva petición debe analizarse antes de ejecutarse. Una solicitud
+aparentemente simple, como instalar un servidor web, puede exigir preguntas sobre el objetivo del
+servicio, quién tendrá acceso, de dónde saldrá la información, qué riesgos de seguridad existen,
+qué recursos hay disponibles y quién mantendrá el contenido. El valor del análisis no está en
+seguir un procedimiento burocrático, sino en evitar soluciones superficiales y en orientar la
+decisión técnica hacia el problema real.
+
+El capítulo termina destacando que el administrador no solo mantiene sistemas, sino que también
+puede mejorar procesos operativos, automatizar tareas repetitivas y proponer cambios que aumenten
+la eficiencia de la empresa. En ese sentido, la administración de sistemas aparece como una tarea
+estratégica: combina criterio técnico, comprensión del negocio, gestión de prioridades y
+capacidad para traducir necesidades difusas en soluciones concretas.
+
+CONCLUSIÓN
+
+En conjunto, el texto presenta la administración de sistemas como una disciplina que va mucho más
+allá del mantenimiento técnico. Su objetivo es garantizar la disponibilidad, seguridad y evolución
+de los recursos informáticos, siempre alineados con las necesidades reales de la organización. La
+primera regla define el propósito general; el análisis de requisitos proporciona el método para
+cumplirlo con criterio.

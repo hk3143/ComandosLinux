@@ -1,0 +1,541 @@
+CAPÍTULO 1. LA PRIMERA REGLA
+
+[Página 1]
+La "primera regla" del administrador de sistemas consiste en proporcionar
+y mantener acceso a los recursos del sistema. Al fin y al cabo, todas nuestras actividades
+profesionales parten o se relacionan con este objetivo. Independientemente dc la plataforma
+informática de que se trate, todos los sistemas operativos proporcionan mecanismos para
+manipular recursoS. Entre estos recursos se hallan los archivos, las aplicaciones, los
+periféricos, el ancho de banda, los ciclos de la CPU, la memoria y el espacio de almacenamiento.
+La identificación de los recursos, de sus propietarios y usuarios, a la vez que la definición de
+las formas de acceso y las autoridades relacionadas, constituye un proceso de análisis de los
+requisitos. Los administradores de sistemas transforman esta generalización en especificaciones
+de cada sistema, de sus usuarios y de su gestión. El mantenimiento del acceso a los recursos de
+un sistema trasciende el mantenimiento del propio sistema. Si éste falla o se vuelve inaccesible
+por cualquier causa, el administrador de sistemas deberá restaurar prontamente e/ funcionamiento
+normal del mismo. La mayoría de la gente piensa que haciendo copias de seguridad se soluciona
+este problema. Sin embargo, nuestro planteamiento girará más bien en torno a la planificación de
+la recuperación, lo cual suele entrañar hacer copias de seguridad, pero también la valoración de
+riesgos, Ia prueba, etc. A lo largo del funcionamiento normal y, especialmente, en Ia medida en
+que las organizaciones crecen y se van adaptando al medio, el uso de los recursos también va
+cambiando. Cuando el uso de cualquier recurso excede a su capacidad, probablemente esto se verá
+como un desastre. El administrador de sistemas habrá fallado en su primera regla de proporcionar
+el ac-
+
+[Página 2]
+'"Ola otros del toda partición dc torreo de ser de planificación es el de nuestra primera regla.
+que es la gar recursos del sistema. asi como la de garantizar que los prestan incluso durante y
+después dc los ataques intrusos. 14 seguridad implica tanto la gestión de las normas corno Sc
+habilitar las tormas apropiadas de acceso, en la medida en cumpl•nucnto. que Jos propietarios dc
+cada recurso lo autorizan. Los procesos de definición y exigencia dc csta.s normas constituyen
+los dos elementos esenciales de la guñdad de los sistemas, Los temas dc seguridad tocan cada uno
+de los pectos de la administración de sistemas. Así, pese a que incluimos un capi. rulo sobre
+cada uno dc estos temas de seguridad, también nos referimos en los capítulos a sus
+implicaciones. Estos temas (cl análisis de los requisitos, la planificación de la recupera. ción
+y la seguridad) constituyen el eje principal del trabajo del administrador de sistemas, a la vez
+que conforman la primera parte de este libro. Para la cusión de estos temas se utilizan ejemplos
+basados en GNU/LINUX , pero la mayoría de ellos se aplican a otras variantes de UNIX. Los
+conceptos se apli. can por regla general a los sistemas informáticos. El resto de este libro
+aborda detalles prácticos acerca de Ia administración de sistemas LINUX, incluyendo el inicio y
+el apagado, el kernel, los perfiles de red y las descripciones de configuraciones de ejemplo
+para los tipcxs más comunes de servidores y estaciones de trabajo. ¿Por qué necesitan los
+sistemas ser administrados? Con LINUX tenemos una versión de UNIX tan fácil de instalar en una
+gran variedad de hardware disponible a bajo precio, que hasta los usuarios no muy experimentados
+pueden emplearlo. Las versiones actuales de las distribuciones populares de LINUX son más
+sencillas de instalar que las versiones de DOS, que se vendían por millones hace menos de una
+década. No obstante, una cosa es instalar LINUX en un PC y otra es ejecutar apli* caciones en
+él. Casi todo el mundo puede hacer lo último. Pero hacer 10 mero de una forma que pueda servir a
+necesidades específicas requiere un Los que se han acostumbrado a las computadoras personales se
+pregun• tarán "¿por qué estos sistemas necesitan una administración permanente?t• El hecho es
+que muchos sistemas no la necesitan. Existen sistemas "a me (lida" y "llave en mano" que
+funcionan como aparatos. Éstos necesitan menos
+
+[Página 3]
+mantenimiento que una tostadora o un frigorífico (que a veces hay que limpiar). Algunos estos
+instrumentos intOrm;i'icos. como los terminales 'gel Etherntulation, Cobalt Networks Cube y la
+computadora dc red (Lorel Cornputing Net Winder. se construyen cn torno a versiones
+personalizadas dc LINI IX. Algunas ctnprvsas los cotnpran, los Conectan y los utilizan sin
+cambio alguno a lo largo dc la vida del producto. Sin embargo. los sistemas infornláticos son
+mucho más dinámicos. computadoras son dispositivos de propósito general, y casi los sistemas
+operativos y todo el software está escrito para su uso general. Así, compete al administrador de
+sistemas la adaptación dc estas herramientas a las necesidades especificas de una determinada
+empresa. Estas necesidades cambian con el tiempo y difieren entre los distintos departamento»;
+de una empresa. ¿Quién administva sistemas Linux? Si está leyendo este libro, existen muchas
+pc»ibilidades de que esté administr•ando por lo menos un sistema Linux, o que vaya a ser
+responsable dc más de uno estos sistemas en cl futuro. posiblemente haya estado administrando
+una IAN repleta de estaciones de trabajo y servidores UNIX, y que haya añadido algunos PC a la
+red. Esto puede estar motivado por su bajo coste, su ubicuidad o por un cúmulo de factores.
+Puede optar por los puertos SPARC, o MIPS de Linux M)bre viejas estaciones de trabajo Sun o DGI
+abandonadas por las más recientes versiones de Solaris e Irix. Quizá se esté acercando a Linux
+desde el mundo del PC. Ha estado administrando servidores NetWare, IAN Manager o Windows NT y
+necesita agrandarlos o reemplazarlos por alguna forma de Unix. A lo mejor ni siquiera se trata
+de los servidores que le interesan. Puede ser que algunos de sus usuarios le pidan acceso a
+aplicaciones y herramientas del mundo de Unix l. La comercialización de WordPerfect para LINUX y
+las recientes actualizaciones de este paquete, los paquetes de aplicaciones comerciales
+ApplixWare y StarOffice y el desarrollo creciente de aplicaciones gratuitas como LyX, SIAG y
+UIMP están contribuyendo a esta demanda. También puede ser que su administración requiera un
+control más centranzado y más seguridad para sus sistemas de sobremesa que IOS que ofrecen los
+sistemas operativos PC y Macintosh. Posiblemente sea un usuario experimentado de LINUX y la
+administraciór profesional de estos sistemas le resulte algo nuevo. La administración de sis
+temas multiusuario y de red resulta mucho más compleja que el manteni miento y el uso de
+sistemas domésticos. Esto es más probable que ocurra en ciertas aplicaciones cientificas y,
+evidentemente, con m' chos programadores. Sorprendentemente, la encuesta IDC de 1997 que LINUX
+se utiliz ba para estaciones de trabajo casi el doble que Windows NT y casi cuatro veces más que
+todas variantes tradicionales de UNIX.
+
+[Página 4]
+sistemas Linux se dirige a estos casos y a no pneac dc algo "para todo el mundo". dc con nivel
+razonable. con marearemos con historias de cómo instalar t.INtiX en un pc. usar un de comandos o
+cómo modificar archivos. los administrado'vs dc sistemas son usuarios avanzados. Pese a que dc
+usuarios dc LINUX carece de experiencia previa (algunas cioncs sugicrvn que la cifra se sitúa cn
+torno al sctcnta y cinco Ciento) Ja mawr parte dc administradores dc sistemas poseen experiencia
+con nas formas dc hNLX. Cargos Mucha gente cuya tarea principal consiste en la administración de
+un si, tema UNIX o LINUX no recibe el nombre de adrninistrador de sistemas DC hecho, este nombre
+no aparece en el Diccionario de Cargos OCUpaciona. les [261. De acuerdo con una encuesta
+realizada por SysAdmin Magazine más del setenta por ciento de suscriptores cuya tarea principal
+consistía en administrar uno más sistemas UNIX poseía otros cargos. SAGE, la Asociación de
+Administradores de Sistemas, trata este tema más detalladamente en Descripciones de Trabajos
+para Administradores de Siste_ mas [281. SAGE es un grupo técnico especial que está integrado en
+la ciación USENIX. Su misión consiste en promover el reconocimiento de la administración de
+sistemas como profesión y en el desarrollo de estándares sobre nomenclatura, aprendizaje y,
+posiblemente, certificación dentro de esta área. Si observamos la encuesta sobre salarios de
+SAGE 2, vemos que las listas de asociados enumeran más de cien cargos distintos. En algunos
+casos, esto se debe a una nomenclatura burocrática, mientras que en otros refleja diferencias
+reales entre las distintas tareas de los administradores de sistemas. Aquí definimos algunos
+cargos y tareas que usaremos a lo largo del texto. Aparte de los administradores de sistemas,
+existen los administradores de ses de datos, los operadores y los administradores. Cuando
+utilicemos un go determinado, su correspondiente tarea será la que definamos aquí. Operadores y
+administradores de sistemas Muchas empresas ponen sus administradores de sistemas,
+administradores de redes, administradores de bases de datos y personal relacionado en el de
+vartamento de Sistemas de Información (IS) o de Tecnologías de InformaciÓ11 (II'). A este g•upo
+posiblemente le añadan analistas de sistemas, creadores de webs, equipos de información y,
+evidentemente, una cierta administraciÓn• se trata de una encuesta anual que sólo está a
+disposición de los asociados de SAGE a de su Sitio web en
+
+[Página 5]
+Algunas empresas disponen de tantos administradores dc sistemas que éstos forman una jerarqtlia
+cerrada, con operadores de sistemas cn la parte inadministradores de sistcnlas júnior y senior
+por encima dc ellos y con director al cargo. Las grandes empresas están aún más jerarquizadas.
+En Ottus casos, los operadores de sistemas trabajan en unidades principay minis (como clústeres
+VAX), los administradores y supervisores de redes sc encargan dc los LAN y scrvidorcs NetWare,
+mientras quc los administradores de sistemas están al cargo de los hosts UNLX y LINUX. En otros
+casos no se hacen distinciones entre estos cargos, parece que no hay normas generales que se
+observen en lo que respecta a estas denominaciones. Sin embargo, es conveniente distinguir entre
+las distintas tareas dentro dc la empresa (incluso si la misma ly•rsona realiza varias). por
+tanto, haremos las siguientes distinciones: El operador sigue un conjunto escrito de
+procedimientos con el fin de re- 7 alizar el mantenimiento rutinario de un sistema y resolver
+las eventualidades que se presenten. Entre éstas destacan: • Realizar copias de seguridad del
+sistema y de los datos. Controlar los sistemas, en especial los servidores y los encaminadores.
+Procedimientos de recuperación de pruebas. Agregar nuevos usuarios. Cambiar las contraseñas de
+los usuarios. Restaurar archivos eliminados o dañados accidentalmente. Eliminar el acceso a los
+usuarios anteriores. Resolver problemas y documentar los subsistemas de cualquiera de estos
+sistemas. Ayudar a los usuarios con temas rutinarios. Recuperarse de desastres menores. Realizar
+reparaciones y actualizaciones menores en los sistemas (agregando y/o reemplazando discos duros,
+memoria, etc.). El administrador de sistemas se encarga de la creación e implementación de estos
+procedimientos. Interpreta las normas, recomienda y lleva a cabo los planes e investiga sobre
+las nuevas tecnologías (a menudo con la evaluación de herramientas y aplicaciones). Y el buen
+administrador de sistemas documenta el entorno. Las responsabilidades típicas de este cargo son:
+• Realizar valoraciones del riesgo. • Preparar planes de recuperación. • Implementar
+procedimientos de copia de seguridad y pruebas. Controlar el rendimiento. • Planificar las
+ampliaciones necesarias y los ajustes a las posibilidades del sistema. Crear scripts para
+abreviar o automatizar ciertas operaciones; delegar y regular otras. Seleccionar el software y
+el equipo.
+
+[Página 6]
+y y procedimientos dc seguridad para • y de seguridad. IOS y personal asistencia con los asuntos
+traordinarios que sc presenten. • Instalar y configurar nuevo hardware y software. • Actualizar
+cl software esistcntc (o probar y preparar planes transitcv rios para actualizaciones
+importantes). • Recomendar configuraciones de servidor. Utilizamos el cargo de administrador de
+sistemas para referirnos a los ponsal,les dc infraestructura de redes, incluyendo los
+encaminadores, con. mutadorc•s, concentradores y cableado. Ins administradores de sistemas son
+los clientes de los administradores de redes. Teóricamente, las normas las dictan los
+administradores para que sean eje. curadas por cl personal administrativo. Un gestor o director
+obtiene (o cia) un conjunto de normas y-o de objetivos y los traduce en requisitos o en normas.
+Idealmente, los directores también actúan como mediadores que proporcionan al departamento de
+tecnología los recursos necesarios para [le. var a cabo cl trabajo y las relaciones con otros
+directores para tratar los asun_ tos entre departamentos. Normalmente, el administrador de
+sistemas y su jefe deben negociar un consenso o especificación a nivel del servicio. Este
+acuerdo puede ser informal o puede tratarse del cumplimiento de unos objetivos trimestrales o
+anua. les. Una especificación sobre servicios bien consensuada constituye una ven. taja
+sustancia/ tanto para los administradores de sistemas como para la dirección, ya que ayuda a los
+primeros a dar prioridad a las tareas y propor. ciona una referencia sencilla a medida que se
+van marcando o delegando nuevos objetivos no previstos. La naturaleza de los departamentos de IT
+los convierte en el chivo expiatorio de los demás departamentos. Los directores de los distintos
+departa, mentos con frecuencia se enzarzan en disputas laborales. Las discusiones negociaciones
+que les siguen a veces son necesarias (Ia distribución de responsabilidades difiere
+originariamente de empresa a empresa y cambi; con el tiempo. Un buen director tratará sobre
+estos temas a la vez que permitirá que administrador de sistemas se centre en temas más técnicos
+y específicos. U buen administrador de sistemas comprenderá estos temas y los incluirá en
+planificación y recomendaciones. Como veremos en el Capitulo 2, la identificación de las partes
+involuci das, sus prioridades y las líneas de autoridad constituyen una parte func mental del
+proceso de análisis de requisitos. Este proceso es crucial para trabajo de todos los integrantes
+de un departamento de IT. Menos evider es el trabajo que se realiza para llevar a cabo estas
+tareas. Una parte de ser un buen administrador de sistemas consiste en nocer lo que es posible y
+lo que hacen los demás al respecto. Por ejemç en pequeñas empresas, los administradores de
+sistemas que no saben ace
+
+[Página 7]
+del enmascaramiento IP pueden estar limitados en sus
+posibilidades de ofre. ccr opciones. los administradores dc sistemas dc las grandes empresas que
+no sepan nada acerca de la distribución dc la carga DNS de asignación dc ida y vuelta y que no
+conozcan los principios subyacentes a una VLAN (IAN vircual) tambien estarán limitados. Así. el
+administrador dc sistemas debe scr como un agricultor. tratando periódicamente una scric de
+tenlas en torno a su competencia para localizar los frutos que está sembrando. También debe ser
+como un cazador. descrihiendo los descos del usuario y de la dirección en términos que scan
+posibles para encontrar coincidencias cn los motores de búsqueda dc Internet y para generar
+respuestas dc las listas de envío y de los grupos dc noticias. Deberes solapados La exlwriencia
+ha demostrado que los administradores de sistemas raramente se entregan a una sola plataforma.
+Casi todos los sitios utilizan varios sistemas operativos distintos. Esto va más allá de los
+casos obvios en que los administradores de sistemas manejen sistemas de escritorio que ejecuten
+MS WINDOWS o MacOS. En particular, muchos administradores de sistemas tienen que manejar
+encaminadores, conmutadores telefónicos, modems, bibliotecas de cintas, set% vidores
+especializados de archivos (como los de Network Appliance y Auspex) y otros equipos que no son
+precisamente computadoras. Muchos de ellos utilizan sistemas operativos que sólo ofrecen un
+parecido remoto con UNIX. Más allá de los entornos con los que trabajan, a los administradores
+de sis temas a menudo se les encomiendan todas las tareas en las que Ia empresa tiene
+especialistas. Los sitios que carecen de DBA (administradores de bases d datos) dedicados
+generalmente, tienen un administrador de sistemas que tiona todos los sistemas de bases de datos
+locales. En sitios que sólo tienen u DBA, normalmente un administrador de sistemas se encarga de
+darle cobert* m y de gestionar muchos de los aspectos técnicos de los servidores de bases datos
+en los que tmbaja el I)BA. De forma análoga, en los sitios en los que I hay administradores de
+red dedicados, los administradores de sistemas gest nan los concentradores, los encaminadores y
+los conmutadores y, a menuc mantienen el cableado de la red. En los sitios en los que no hay una
+asisten técnica, los administradores de sistemas suelen proporcionar toda la asisten técnica que
+necesita el usuario final. En los sitios en los que sí hay, éstos ser la autoridad última en lo
+que respecta a las cuestiones técnicas. La documentación del fabricante La principal fuente de
+información de todo sistema operativo o paquel software debe ser su propia documentación, ya
+esté en formato impre
+
+[Página 8]
+cicctrónic•o. Ésta incluye páginas ayuda «que tradicionalmente pro ciona el con,ando man dc UNIX
+y 1.1,NUX y que complementan el program xinfo y los que forman parte del paquete GNU), las
+pantallas da, los menús y caractcnsticas que hay dentro dc los propios programas Dado que LINUX
+no es c/ producto de un solo fabricante, vemos que la documentación dc los distintos paquetes
+GNU, LINUX y otros paquetes tos se presenta a partir de distintas fuentes y en muchos formatos.
+La documentación de LINtJX la desarrolla el mismo y se distribw de misma torma que el propio
+LINUX. El Proyecto de Documentación de Linux constituye un esfuerzo de colaboración de muchos
+Voluntarios in_ dividua/es y de diferentes empresas interesadas. Incluye más de cien mentos del
+tipo "Cómo..." sobre determinados temas y paquetes, una Serie preguntas y un conjunto dc guías
+(libros). Éstas son las fuentes del fabricante para la documentación de LINUX El punto de
+partida de los principiantes de LINUX está en instalar Linux y ern. pezar. Así, un usuario puede
+progresar a la Guía del usuario de Linux, mien_ tras que el administrador de sistemas aspirante
+sin duda querrá examinar mi. nuciosamente la Guía de administradores de redes de Linux y la Guia
+de administradores de sistemas de Linux. Aparte de estas fuentes, casi todas las distribuciones
+de Linux vienen con su propia documentación. Algunas se presentan en formato impreso (como
+ocurre con Red Hat), otras vienen en formato electrónico (Debian) y otras en ambos formatos
+(S.u.S.E.). Remítase siempre a la documentación de su distribuidor. Algunos paquetes cambian
+cuando se actualizan. El mapa no es el terreno. Si nuestros ejemplos difieren de las páginas man
+o texinfo de su sitio, probablemente el comportamiento del programa coincidirá con su
+documentación. A la postre, el propio programa es el "terreno". En ciertos casos, puede que sea
+necesario poner a prueba el programa o leer sus fuentes, preferentemente apoyándose en la
+documentación que éste incluye. Otros libros Casi toda la información acerca de LINUX está
+disponible en Internet. LINUX fue creado como colaboración en Internet, y su documentación ha
+seguido el mismo modelo. Finalmente, LINUX es una implementación de UNIX. Por tanto, casi todos
+los libros de UNIX se aplican tanto a Linux como a cualquier otro sabor de UNIX. Gran parte de
+la documentación escrita específicamente para LINUX - se puede aplicar a cualquier otro UNIX (en
+especial dado que casi todos los Programas que se ejecutan bajo LINUX se pueden transportar a
+casi todas las rplataformas UNIX). Ésta es la razón por la que muchos profesionales de de otras
+plataformas se suelen suscribir al Diario de Linux y se suelen remitir a las soluciones del
+Proyecto de Documentación de Linux para llevar a cabc
+
+[Página 9]
+Recomendamos dos libros sobre administración de sistemas UNIX qu verdaderanwntc merecen la pena:
+Essential Systcni Administration (Administración de sistemas ese cial). segunda edición. dc
+Eilccn Frisch. Unix Systcm Administration Handbook (Libro de bolsillo sobre a ministración dc
+sistemas Unix). segunda edición, de Evi Nemeth y otros. Ina de las preguntas más formuladas en
+el grupo dc noticias comp.unix.a min de USENET es "Soy un nuevo administrador de sistemas, ¿qué
+libros de leer?" La respuesta incluye invariablemente los dos títulos citados (y esper mos que
+incluya éste). Muchos de los temas tratados aquí en un solo capítulo es el tema de lúmenes
+enteros. por ejemplo, la manipulación del correo y de los nomb de dominio son temas especiales
+que requieren libros aparte. Otras nece dades específicas también requieren más libros
+específicos. Casi todos los pítulos incluyen una lista dc lecturas sugeridas. Administración de
+sistemas Linux en la Web Administración de sistemas Linux tiene URL. LINUX es un producto de
+ternet y casi toda Ia información al respecto se encuentra disponible Web. Sin embargo, la Web
+es enorme. Incluso con motores de búsqueda COI Yahoo! y Alta Vista, puede resultar dificil
+localizar lo que se está buscan' Además, la Web está continuamente en proceso de cambio. La
+gente cam de afición como de ISP. Los proveedores de servicios quiebran, etc. Como sultado de
+ello, el mejor URL, hoy por hoy, es el "Error 404" del mañana. Sólo tiene que teclear un URL de
+este libro en su navegador. Así, en de tener que volver a escribir los URL que se enumeran en
+los pies de na, busque lo siguiente: Erratas, anotaciones y vínculos de Administración de
+sistemas http://www.linuxsa.com/. Toda correspondencia relativa a este libro puede ser enviada
+a: Isa@linuxsa.com.
+
+CAPÍTULO 2. ANÁLISIS DE REQUISITOS
+
+[Página 10]
+Un planteamiento elegante sobre el problema equivocado arroja una lución equivocada. Los
+usuarios y directivos que plantean sus peticiones a administradores de sistemas a menudo
+presentan un problema equivocado, ya que les falta la perspectiva para ver el bosque a través de
+los ártY)les. A un administrador de sistemas le resulta fácil perder la visión de sus
+prioridades y objetivos cuando está muy «x•upado intentando resolver los problemas y
+reaccionando ante síntomas superficiales. Así, le compete al administrador de sistemas tener la
+profundidad y comprensión suficientes del negocio como para saber discernir los verdaderos
+problemas subyacentes a las quejas que le puedan plantear. El análisis de requisitos constituye
+'un proceso de traducir los resultados deseados en especificaciones. La dirección dicta las
+normas, y los administradorcs de sistemas traducen estas normas en procedimientos y planes (para
+operadores) y hacen recomendaciones (a la dirección). Esta información del administrador de
+sistemas es necesaria para proporcionar a la dirección la información adecuada sobre la que
+basar las normas. La clave del análisis de requisitos consiste en entender los resultados
+dewados de nuestros directivos y usuarios y en manipular tales expectativas o en satisfacer
+tales necesidades. Haciendo esto se resuelven muchos problemas. Finalmente, todo trabajo o
+proyecto trata de lo que una serie de personas desea. identificación del conjunto de personas a
+satisfacer constituye el primer paso hacia lo que es necesario hacer. Es entonces cuando nos
+podemos preguntar lo que en realidad desean estas personas. Por ejemplo, los usuarios a menudo
+desean tener nuevos equipos informáticos, y se quejan de que los que tienen son muy lentos. El
+verdadero problema puede ser que Ia escasez de memoria puede estar causando esta lentitud. En
+tales casos, aña-
+
+[Página 11]
+dir memoria. por regla general, satisfacer al usuario, Observe que in. «luso este sencillo caso
+requiere cierto análisis c investigación. Los requisitos de trabajo del administrador dc
+sistemas mayoría dc administradores de sistemas profesionales desean obtener o mantener un
+puesto dc trabajo dentro de su campo, progresar en sus carreras o posiblemente cambiarse a otro
+campo superior. Casi todcxs prefieren trabajar con la última tecnología, y se sienten
+satisfechos no sólo por el hecho de hacer bien su trabajo, sino también al wlucionar problemas o
+al hacer que su em. presa funcionc bien. En el análisis previo de requisitos se trata de
+determinar si se tienen ap. titudes e interés necesarios para un determinado puesto. Puede
+decidir que carece de la experiencia necesaria, lyro a pesar de ello, le pueden ofrecer el
+puesto. Posiblemente sea la experiencia el requisito previo más obvio para el administrador de
+sistemas, pero no el más importante. La capacidad de nocer nuestras propias limitaciones y la
+voluntad de hacerlo, la investigación y la recomendación de más estudio puede ser más valioso
+que la soltura en comandos Shell o en automatización con Perl. Por otra parte, puede que llegue
+a la conclusión de que un determinado puesto no le interesa. El análisis de requisitos, sin duda
+le ayudará a descubrir más rápidamente que la experiencia. En algunos casos, puede ser que
+llegue a aislar los aspectos del puesto que rechaza, para así cambiarlos, delegarlos o
+reasignarlos. Casi todos los libros acerca de administradores de sistemas comienzan con una
+lista de obligaciones normales para el puesto. Como hemos visto, existen una serie de cargos
+bajo los cuales desempeñan su trabajo los administradores de sistemas. Además, los trabajos
+pueden variar considerable. mente de un puesto a otro. El problema es que esta lista de
+obligaciones típicas no cubren todas, ni incluso, la mayor parte de las obligaciones de un
+determinado administrador de sistemas. Para las excepciones, lo extraorditu rio y el resto,
+existe un proceso que consiste en explorar los requisitos y ne gociar entre las M)luciones
+posibles. Idealmente, se querrá llevar a cabo cierto análisis de los requisitos para un puesto
+potencial de administrador de sistemas incluso antes de aceptarlo. formulación de las preguntas
+oportunas en una entrevista de trabajo posible mente aumente las posibilidades de obtener el
+puesto. Las buenas preguntas demuestran más experiencia y conocimientos que las anécdotas sobre
+pasados trabajos, y sin duda demostrarán su verdadero interés por el puesto. He aquí algunas
+cuestiones que deberá plantearse antes de aceptar el go de administrador de sistemas: ¿A quién
+tiene que informar? ¿Quién, si es que hay alguien, tiene la obligación de informarle? ¿Cuáles
+eran las obligaciones de su predecesor?
+
+[Página 12]
+qué Citvt•nstancias dejó el puesto su predecesor? posible entrar cn contacto con predecesor?
+etnprcsa. ¿utiliza algún tipo (le sistema dc "control de temas'? ¿Existen pmccdimicntos
+definidos dc intensificación sobre ternas técnicos y normativos que puede llegar a resolver
+usted sólo? • a¿xiste un servicio dc asistencia o departamento técnico interno en la 15 empresa?
+¿Fstá en la ruta de intensificación dc ese equipo? ¿Va a convertirsc en el servicio de
+asistencia? • ¿Existen normas actuales de seguridad en la empresa y un uso del tema y de Ia red
+aceptables? Estas normas, ¿son públicas? y ¿están disponibles en la intranet? • Ha habido una
+auditoría reciente sobre la seguridad o administración del sitio? • ¿Existen planes de
+recuperación de desastres? ¿Son comprensibles? ¿Han sido probados? ¿Con qué frecuencia? ¿Está el
+sitio experimentando problemas de rendimiento o de capacidad? EI jefe al que va a informar, ¿ya
+tiene una serie definida de patrones sobre rendimiento que se relacionan con su puesto? Asunción
+de responsabilidades La puesta en práctica de la administración de una nueva serie de sistemas
+puede suponer una experiencia temible. En las mejores circunstancias trabajará con el
+administrador de sistemas que inicialmente ideó el sistema, o con el que lo ha utilizado y
+administrado durante un tiempo. A veces es posible que se vea obligado a cambiar el sistema por
+completo, incluso sin la ayuda de su predecesor. En el peor de los casos estará heredando un
+sistema que no ha sido correctamente administrado o uno que su predecesor ha dejado hostilmente.
+En estos casos se enfrentará a Ia posibilidad real de que su predecesor haya dejado bombas en
+uno o más sistemas, lo que veremos con más profundidad en el Capítulo 8, "Imponer seguridad" Los
+requisitos de Ia empresa ¿Qué es lo que su jefe espera de usted? ¿Cómo define él Ia
+administración de sistemas? Como hemos visto, el concepto incluye una serie de cargos y tareas
+que no significan lo mismo en todas las empresas. El análisis de requisitos responde a estas
+cuestiones y a muchas otras similares. Normalmente, el análisis de requisitos es estudiado por
+programadores y diseñadores en el contexto de diseño de productos. Es una pena que el tema no se
+discuta con una mayor amplitud. En definitiva, sencillamente trata de una forma de clarificar
+los problemas. En otras palabras, se trata d«
+
+[Página 13]
+para desarrollar tina especificación a nivel de servicios, tendrá que reunir mucha infórmaciOn y
+formular muchas preguntas. IIc aqui algunas: ¿Para quién trabaja? ¿Quién trabaja con usted y
+para usted? ¿Qué sistemas tiene a su cargo? ¿Será necesario un departamento de asistencia
+telefónica 24 horas? ¿Qué nivel de aprendizaje está disponible? ¿Quién utiliza estos sistemas?
+¿Qué aplicaciones y scwicios se utilizan? ¿Qué aplicaciones y servicios tenía su predecesor (o
+siguen teniendo sus colegas)? ¿Quién establece estas normas, y quién tiene la autoridad de
+revisarlas? por supuesto, es posible seguir hacia delante y aprender mientras va avanzando.
+Puede hacer uso de su mejor juicio cada vez y adivinar sus prioridades. También puede
+preguntarle a su jefe y a sus colegas. En cualquier caso, tendrá que hacer algo de esto. Sin
+embargo, crear una especificación a nivel de servicios y clarificar estos puntos a tiempo (así
+como negociar una serie de prioridades) puede ahorrarle tiempo y algunos errores. Como ejemplo
+del establecimiento de prioridades, es probable que sea responsable de una serie de servicios.
+Si algunos usuarios realizan el procesamiento de transacciones (como los pedidos telefónicos)
+mediante el uso de un sistema de base de datos corporativo, es posible que el mantenimiento de
+ese servidor y de las redes y-o terminales que estén conectadas a éste sea prioritario. En casi
+todas las empresas, el correo electrónico de la empresa es prioritario sobre el acceso a
+Internet, que, a su vez, suele tener prioridad sobre el uso de los grupos de noticias. Por
+ejemplo, la mayoría de aplicaciones y servicios requieren un acceso a DNS (el servicio de
+nombres de dominio), y muchos servicios y aplicaciones dependen del ahorro de tiempo en todos
+los sistemas de una red (como los sistemas de contabilidad). Casi todo lo que hay en una red
+depende del encaminamiento básico y de los protocolos de baic nivel. Por tanto, el hecho de
+mantener estos subsistemas, por regla general suele ser de alta prioridad, pese a que Ia mayoría
+de usuarios no se dan cuen ta de que son aspectos distintos de su trabajo. Análisis inicial de
+requisitos La primera oportunidad para llevar a cabo el análisis de los requisitos : produce
+cuando está considerando un nuevo puesto de trabajo o una pr moción. La finalidad del análisis
+inicial de requisitos consiste en crear Ia pecificación a nivel de los servicios para, al final,
+recoger Ia suficiente mación como para decidir si se desea asumir ese determinado conjunto
+responsabilidades.
+
+[Página 14]
+está a punto de descubrir estas dependencias y prioridades. A medida que vaya descubriendo las
+exigencias de su empresa, sin duda se empezará a plantear las consecuencias de los fallos y
+desastres. irá involucrando en la valoración de riesgos, que conduce a la planificaciÓ11 de Ia
+recuperación. Cuando defina estos criterios y los escriba, habrá cread( una especificación a
+nivel de servicios (a veces llamado consenso a nive de servicios). La especificación a nivel de
+servicios Se trata del del análisis global inicial de requisitos. Esperem que pueda empezar ese
+proceso antes de aceptar el puesto de trabajo.
+
+[Página 15]
+Para resumir cl proceso dc determinar los requisitos, destacaremos nos apmpiAdos toda empresa.
+Antes dc empezar con ceso, pregunte si las circunstancias dc empresa necesitan más • Identifique
+las partes implicadas: usted, su jefe, su director, rios. sus ayudantes, etc. • Clarifique las
+líneas de autoridade Haga un inventario de los recursos a su cargo: Redes. Servidores (Dosis).
+Periféricos y otros equipos (concentradores, encaminadores, etc.). Servicios (compartir
+recursos, imprimir, correo electrónico, etc.). • Aplicaciones y subsistemas. Sistemas
+telefónicos. • Encuestc a los usuarios: aprenda en cada raso lo que los miembros presentativos
+de cada grupo hacen en cada uno de sus sistemas. Análisis de requisitos en curso Desde el
+análisis inicial de requisitos, habrá oportunidades sobre la mar. cha para poner en práctica
+estas habilidades. Le sugerimos que revise cada solicitud de los usuarios y directores corno un
+conjunto de requisitos que nt. cesitan cierta dosis de análisis. Por ejemplo, si de repente un
+jefe entra y le pide que instale un servidor web, podría facilitarle la copia de Apache que
+probablemente haya rado LINUX, o simplemente señalarle alguno de los servidores sobre los que
+LINUX está instalado. Sin embargo, Ia formulación de preguntas puede revelar que se hace
+necesario un planteamiento muy diferente. He aquí algunas de las cuestiones a preguntarse en
+este caso: ¿Qué información o recursos hay que facilitar? ¿Quién debe tener acceso a éstos?
+¿Dónde se encuentran? ¿Qué tipo de conexiones tienen? ¿Qué velocidades y protocolos admite este
+tipo de conexiones? ¿De quién o de dónde procede la información? ¿Cuáles son los riesgos
+asociados a la revelación no autorizada de estos datos? • ¿De cuánto dinero, tiempo y otros
+recursos se dispone? ¿Quién va a controlar el contenido? Se trata de un punto de partida. Las
+respuestas a estas preguntas sin duda le llevarán a otras preguntas. Observe la preocupación por
+Ia seguridad y el mantenimiento del sitio subyacente a estas cuestiones. Obviamente, Ia
+situación puede pasar por llamar a un servidor normal ac cesible públicamente o, sencillamente,
+tenerlo albergado virtualmente (man
+
+[Página 16]
+tenido cn una máquina casn•partida (cuando uno dc sistemas sc en 'a un es valido para tipos
+Sitios Si la c. paca interno por parte los empleados, el un servidor intranet Aqui e•• cne los
+complejos acerva la sensibilidad y el dc acceso embargo. cl acceso y (lifere•tu a los privados
+por parte dc rvprvscntantcs autorizados dc otras empresas define a una extraneV Esto implica
+casi la misma preocupación dc seguridad un servidor intranet que es menos obvio es que puedc que
+sea necesaria una solución complctamente distinta, como la de una lista dc envío automatizada o
+un buar'm respondedor. Puede incluso pensar que la Web. con toda su popularidad y ubicuidad. no
+es lo apropiado para las exigencias dc su gestor. Sin duda. en estos dias que corren, resulta
+muy dificil imaginar a una empresa que tenga buenas razones para no abrir su propio consultorio
+ciberespacial, nun- 10 sabrá hasta que pregunte. Este ejemplo lo hemos elegido '-a que, en un
+principio. parece que no tiene sentido. El proceso El prcx•eso de transformación de una
+solicitud en una especificación debc•rá ser lo suficientemente sencillo y rápido como para
+asegurar que la satisfacción de la especificación no sólo va a solucionar el síntoma, sino
+tambien el verdadero problema. Este proceso puede variar algo de una empresa a otra, pero regla
+general implicará algunos o casi todos los pasos siguientes. Si el proyecto es urgente, todo se
+puede afrontar en cl mismo día. Los proyectos urgentes pueden condensar el proceso en una rápida
+discusión entre los administradores de sistemas más veteranos. Pero los objetivos del prcw•eso
+permanecen invariables: el de determinar el problema en curso y el de hallar una lución.
+Abstraerse de Ia descripción del problema A menudo, una solicitud o requisito se expresará como
+una norma para implementar un determinado planteamiento o solución propuesta; ejemPIO, "tenemos
+que instalar un nuevo servidor ueb". Querrá abstraerse de este para buscar el resultado deseado.
+En ciertos casos, esto es lo que se requie re. Sin embargo, si comprendemos mejor los resultados
+apetecidos o el ob jetivo esperado, sin duda estaremos en mejor posición para ofrecer buena
+recomendaciones. Incluso cuando consultamos con otros (como un grupo noticias), "¿cuál es el
+mejor web?" , la respuesta menos útil puede algo asi como "¿cuál es el mejor servidor web para..
+
+[Página 17]
+que sigue a nuestro primer requisito implícito. Cuando examinamos Ia disponibilidad y ampliamos
+el concepto de los recursos de sistemas para incluir los ciclos de CPU, el ancho de banda de una
+red y el espacio en el disco, vemos que nuestros gestores y usuarios tienen muchas posibilidades
+de considerar una amplia gama de fallos de planificación. Así, el control del rendimiento y la
+planificación de las posibilidades también están implícitos. En resumen, hemos localizado un
+cúmulo de requisitos resultantes de nuestra primera regla.
+
+[Página 18]
+Clarificar las autoridades
+
+Siempre hay una persona o grupo personas que juzgan si un esfuer„, ha beneficioso o peri"dicial
+para la misión general de la empresa. Norma L mente. aunque no siempre. que definir el problema
+en términos requisitos, t 'n administrador dc sistemas «a.mprcnde• cl negocio del mismo que los
+que van a juzgar rcndinliento, puede que busque cumplir los sitos dc IOS accionistas por encima
+dc los intcrcscs dc los directivos. A haccr esto puede ser la cosa más ética que un administrador
+de sistemas haga cn su vida profesional. los riesgos no deben scr tomados a la ligera. NormaL
+mente. bastará con señalarle al directivo que un determinado camino puede redundar cn interés de
+IOS accionistas. El intento de un directivo de hacer 10 que no debe a veces puede ser detenido
+por un administrador de sistemas ve. terano que le pone cl cargo a su dispcxsición. Si se acepta
+la dimisión, puede que. después de todo. no haya sido el mejor entorno para trabajar. Incluso
+después dc identificar el grupo cuyos requisitos van a ser pales, generalmente será necesario
+considerar los requisitos de los distintos grupos secundarns y terciarios. Por ejemplo, en el
+sector de las inversiones de banca, la necesidad dc corredores cs vital, pero la de burócratas y
+otros también ser satisfecha. Definir el camino del éxito Una vez seleccionadas las personas
+cuyos requisitos van a ser cumplidos, el siguiente consiste en determinar exactamente lo que
+constituye el éxito de haberlos cumplido. En otras palabras, se debe encontrar un conjunto de
+medidas para determinar el alcance del éxito. Por ejemplo, si el requi. sito es que fallen menos
+estaciones de trabajo, el camino puede ser el tiempo medio entre fallos o el número de fallos
+por unidad de tiempo. Formule preguntas abiertas A menudo será necesario encuestar a las
+personas cuyos requisitos van a ser satisfechos, tanto para comprender los verdaderos requisitos
+como para definir el camino hacia el éxito. Si bien muchas cuestiones serán específicas. incluso
+teniendo respuestas "sí" o "no", algunas preguntas deberán ser abiertas, como "¿cuáles son sus
+preocupaciones?" o "¿qué podemos hacer para Fscribir Ia especificación especificación debe ser
+escrita. con esto se garantiza que todo el mundo está de acuerdo. A menos que la especificación
+se haga en un prcy
+
+[Página 19]
+sonal unas herramientas más previsoras (o aleccionándoles en cl uso de las que ya están
+instaladas). En un caso típico puede toparse con alguien que está imprimiendo una seric de
+informes de un sistema o aplicación y volviendo a introducir algunos dc los datos en otros. Este
+riesgo persiste hoy por hoy, con aplicaciones cliendc intranet que utilizan formularios ITIMI. y
+scripts CGI como middlewaentre navegadores y las distintas clases de aplicaciones de gestión de
+bases de datos y flujo de trabajo del servidor, como ocurría cuando las minicomputadoras
+empezaban a ejecutar algunas dc las tarcas que normalmente llevahan a cabo las unidades
+centrales. El volumen inicial de transacciones manipu(adas en estas situaciones puede convertir
+a la interfaz basada en formularios en la mejor opción. Sin embargo, es muy fácil cambiar esto
+sin que la dirección observe cuánto tiempo dedica a ello el personal, Existen especialistas que
+analizan las operaciones de una empresa con el fin de diseñar e implementar estos tipos de
+mejoras en procesos de trabajo (corrientemente, se les denomina analistas operativos). Es de la
+opinión de los autores que todos los empleados y participantes de las empresas deben luchar por
+llevar a cabo cierto "análisis operativo", preguntándose "¿por qué estamos haciendo esto?" y
+"¿existe una manera mejor dc hacerlo?". Los administradores de sistemas están muy bien situados
+para realizar tales análisis, puesto que ya están implicados en esa amplia gama de operaciones y
+análisis. Decisiones y recomendaciones Los administradores de sistemas LINUX constantemente
+tienen que tomar decisiones y recomendaciones. LINUX posee la potencia y la flexibilidad
+legendarixs de UNIX, conformando un planteamiento de "caja de herramientas" dc la informática.
+Proporciona una serie de mecanismos desde los que se pueden construir soluciones específicas del
+sitio, liberando a las empresas de la puesta en práctica de normas concebidas por los
+fabricantes de software. Esta flexibilidad y potencia son la cara y cruz del administrador de
+sistemas LINUX y UNIX son menos restrictivos que los demás sistemas operativos. Dado que no
+establecen normas, deberemos seleccionar las herramientas que observen nuestros requisitos. Para
+hacerlo, deberemos comprender nuestros requisitos y conocer nuestras opciones. De esto trata el
+resto del libro. Como veíamos en el Capítulo l, "la primera regla", uno de los temas de este
+libro es "Generalmente existen otras opciones". Más estudio El tema del análisis de los
+requisitos podría ocupar la totalidad de un libro, como Exploring Requirements: Quality Betore
+Design (Exploran- 23
+
+[Página 20]
+Facilitar actualizaciones, expansiones y nuevas instalaciones
+
+El mantenimiento de los sistemas existentes suele scr menos ta tarca dc un
+administrador dc sistemas, o menos de la mitad de dc sistemas. las empresas cambian, y también
+lo hacen las mdcs. TOCIO cl sector software comercial se dedica a a IOS usuarios dc que cambicn
+sus sistemas (a través de actualizacio y nucsa.s adquisiciones). Esto viene en apoyo de las
+muchas otras causas cambio cn las redes y cn los sistemas. En 1991. la Web suponía una novedad
+(un conjunto de herramientas y que utilizaban algunos fisicos para facilitar la acción de
+compartir úrurnentos técnicos con referencias cruzadas de fácil seguimiento). Ahora es cl centro
+de muchos negocios. Probablemente acabe poniendo los ma. nualcs sobre normas y procedimientos de
+su empresa en un servidor web de intranet (si tcxlavía no están). Hace algunos años, la noción
+de teleconmutación era prácticamente des concx•ida. Pronto veremos empresas que realicen la
+mayor parte de sus raciones a través de vínculos remotos. Ya estamos atendiendo al advenimiento
+de las oficinas virtuales (donde todos los empleados trabajan en casa). Estos entornos presentan
+nuevos retos para los administradores de sistemas. Trxia actualización, expansión y nueva
+instalación de sistemas procede de algún requisito. EI análisis de cada uno de los requisitos
+que lleva a estcxs planes de expansión y actualización es, en esencia, similar al proceso
+utilizado para crear la especificación a nivel de los servicios. Hay que identificar las partes
+implicadas (es decir, el director cuyo departamento necesite imprimir más), clarificar las
+líneas de autoridad (quién aprueba los planes, las adquisidones y demás decisiones), etc.
+Análisis operativo Idealently, en su papel como administrador de sistemas encontrará
+oportunidadcs creativas para mejorar el funcionamiento de su empresa. Posible mente pueda
+eliminar la escritura repetitiva escribiendo un script para colo• car un informe en otra base de
+datos o sistema de transacción. Es posible que sea capaz de reducir el consumo de papel y de
+tóner proporcionando al per
+
+[Página 21]
+do los requisitos: la calidad antes del diseño), de Donald C. Gausc y El aprendizaje dc los
+requisitos pucdc afectar profundamente a su Vida personal. asi como a su carrera, Aprender a
+distinguir entre requisitos y pre_ fcrcncias, identificar las partes implicadas cn cualquier
+problema o proceso definir las limitaciones, establecer prioridades y permitirse "pensar por
+mismo" hasta llegar a comprender cl problema son premisas que constituyen orset House Pres
